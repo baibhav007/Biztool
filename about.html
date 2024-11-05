@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biz Tool - Digital Business Tool & Local</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+  <!-- Meta Tags for About Us Page -->
+  <meta name="title" content="About Us - GST Billing App">
+  <meta name="description" content="Learn more about GST Billing App, our mission, vision, and how we help businesses streamline their GST billing process.">
+  <meta name="keywords" content="about us, gst billing, gst app, gst billing solution, about gst billing app">
+  
+  <!-- Open Graph Tags for Social Media -->
+  <meta property="og:title" content="About Us - GST Billing App">
+  <meta property="og:description" content="Learn more about GST Billing App, our mission, vision, and how we help businesses streamline their GST billing process.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourwebsite.com/about-us">
+  <meta property="og:image" content="https://yourwebsite.com/images/about-us-image.jpg">
+  
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About Us - GST Billing App">
+  <meta name="twitter:description" content="Learn more about GST Billing App, our mission, vision, and how we help businesses streamline their GST billing process.">
+  <meta name="twitter:image" content="https://yourwebsite.com/images/about-us-image.jpg">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <a href="index.html">
+        <div class="logo">
+            <img src="images/logo.png" alt="Biz Tool Logo" />
+        </div>
+    </a>
+        <button class="menu-button" id="menuButton" aria-expanded="false" onclick="toggleNavbar()">
+            <img src="images/menu-button.png" alt="Menu">
+        </button>
+        <div class="nav-links" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact-us</a></li>
+            </ul>
+        </div>
+        </nav>
+
+        <button class="notify-btn">Download Now</button>
+    </header>
+    <br>
+    <br>
+    <div class="floating-buttons">
+        <button class="button sendenquiry-btn" onclick="openPopup()"><i class="fa fa-file-text-o">Send
+                Inquiry</i></button>
+        <button class="button green" onclick="openWhatsApp()"><i class="fa fa-whatsapp"></i>WhatsApp</button>
+    </div>
+
+    <!-- Popup Form -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">✖</span>
+            <h2 class="features-title">Contact Us</h2>
+
+            <form action="#" method="post" class="contact-form">
+                <input type="text" placeholder="Your Name*" required><br>
+                <input type="email" placeholder="Your Email*" required><br>
+                <textarea placeholder="Your Message*" required></textarea><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <section class="gst-billing-section">
+        <div class="container">
+          <div class="heading-btn-col">            
+              <h1 class="gst-heading" id="h-gst-billing-app">About Us</h1>
+          </div>
+        </div>
+      </section>
+      
+      
+    <section class="content-section">
+        <div class="text-section">
+            <div class="header-left">
+                <h3 class="features-title">About Us</h3>
+            </div>
+            <br>
+            <h3> Sahi select karo BizTools select karo !</h3>
+            <br>
+            <h3>"Biz Tool (Digital Business Tools & Local Search Engine) is a dynamic Indian startup founded by (Manas
+                Kumar Sahoo in 2022)
+                Our innovative platform is designed to help business owners and service providers attract more customers
+                through our local search engine services and business tools. In addition to enhancing local visibility,
+                Biz Tools offers a comprehensive suite of digital biz tools
+                means digital business tools aimed at driving business growth"</h3>
+            <br>
+
+        </div>
+
+        <div class="video-section">
+            <img src="images/about.png" alt="Feature 1" />
+
+        </div>
+    </section>
+
+
+    <section class="about-content">
+        <div class="header-testimonial">
+            <h1 style="font-size: 30px;" class="features-title">Our Mission</h1>
+        </div>
+        <div class="quote">
+
+            <p>At BizTool, we empower local businesses by enhancing their digital presence and customer reach. We
+                offer tools like mini websites, income and expense ,invoice, digital banners, visiting
+                cards, bulk WhatsApp marketing, QR code generation, and AI-powered promotional videos. Our local search
+                engine connects businesses with their communities. Supported by brand ambassador Arbaaz Khan, we are
+                committed to driving innovation and growth for Indian businesses from our bases in Gujarat and Noida.
+            </p>
+        </div>
+
+        <br>
+        <div class="header-testimonial">
+            <h1 style="font-size: 30px;" class="features-title">Our Vision</h1>
+        </div>
+        <div class="quote">
+
+            <p>At BizTool, we provide a comprehensive suite of digital business tools and local search engine services
+                designed to drive growth and efficiency for local businesses. Our offerings include: </p>
+            <br>
+            <ul>
+                <li>Mini Website Creation: Customizable websites to enhance online presence. </li>
+                <li>  Income & Expense Management: Tools to track and manage finances.</li>
+                <li>  Digital Banners & Visiting Cards: Professional digital marketing materials.</li>
+                <li>  Bulk WhatsApp Marketing: Efficient customer outreach.</li>
+                <li> QR Code Generator: Simplify access to your services.</li>
+                <li> AI Promotional Videos: Enhance marketing with cutting-edge AI technology.</li>
+                <li>  Our platform is designed to support business owners in maximizing their potential and achieving
+                    sustainable success.</li>
+            </ul>
+        </div>
+        <br>
+        <br>
+
+        <div class="header-testimonial">
+            <h1 style="font-size: 30px;" class="features-title">Meet Our Team</h1>
+        </div>
+        <div class="team-section">
+            <div class="team-member">
+                <img src="images/team1.png" alt="Team Member 1" />
+                <h3>Manas Kumar</h3>
+                <p>Founder & CEO</p>
+            </div>
+            <div class="team-member">
+                <img src="images/team2.png" alt="Team Member 2" />
+                <h3>Aditi Verma</h3>
+                <p>Head of Marketing</p>
+            </div>
+            <div class="team-member">
+                <img src="images/team3.png" alt="Team Member 3" />
+                <h3>Rajesh Gupta</h3>
+                <p>Product Manager</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="contact-us">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or would like to learn more about our services, please feel free to reach out!</p>
+        <p>Email: <a href="mailto:info@biztool.com">info@biztool.com</a></p>
+        <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
+    </section> -->
+
+
+    <script src="js/scripts.js"></script>
+
+
+</body>
+
+</html>

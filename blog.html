@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Biz Tool</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Meta Tags for Blog Page -->
+    <meta name="title" content="Blog - GST Billing App">
+    <meta name="description" content="Read the latest blogs on GST, taxation, billing, and business tips to keep your accounting up-to-date with GST Billing App.">
+    <meta name="keywords" content="blog, gst, gst billing, accounting tips, gst tips, gst blog, business blog">
+    
+    <!-- Open Graph Tags for Social Media -->
+    <meta property="og:title" content="Blog - GST Billing App">
+    <meta property="og:description" content="Read the latest blogs on GST, taxation, billing, and business tips to keep your accounting up-to-date with GST Billing App.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/blog">
+    <meta property="og:image" content="https://yourwebsite.com/images/blog-image.jpg">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog - GST Billing App">
+    <meta name="twitter:description" content="Read the latest blogs on GST, taxation, billing, and business tips to keep your accounting up-to-date with GST Billing App.">
+    <meta name="twitter:image" content="https://yourwebsite.com/images/blog-image.jpg">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.html">
+            <div class="logo">
+                <img src="images/logo.png" alt="Biz Tool Logo" />
+            </div>
+        </a>
+        <nav>
+            <button class="menu-button" id="menuButton" aria-expanded="false" onclick="toggleNavbar()">
+                <img src="images/menu-button.png" alt="Menu">
+            </button>
+            <div class="nav-links" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact-us</a></li>
+                </ul>
+            </div>
+        </nav>
+        <button class="notify-btn">Download Now</button>
+    </header>
+    <br>
+      <br>
+    <section class="gst-billing-section">
+        <div class="container">
+          <div class="heading-btn-col">            
+              <h1 class="gst-heading" id="h-gst-billing-app">Blog</h1>
+          </div>
+        </div>
+      </section>
+    <div class="floating-buttons">
+        <button class="button sendenquiry-btn" onclick="openPopup()"><i class="fa fa-file-text-o">Send Inquiry</i></button>
+        <button class="button green" onclick="openWhatsApp()"><i class="fa fa-whatsapp"></i>WhatsApp</button>
+    </div>
+
+    <!-- Popup Form -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">✖</span>
+            <h2 class="features-title">Contact  Us</h2>
+
+            <form action="#" method="post" class="contact-form">
+                <input type="text" placeholder="Your Name*" required><br>
+                <input type="email" placeholder="Your Email*" required><br>
+                <textarea placeholder="Your Message*" required></textarea><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+        
+    <section class="blog-hero">
+        <div class="header-testimonial">
+            <h1 style="font-size: 30px;" class="features-title">Our Blogs</h1>
+        </div>
+        <div class="quote">
+        <p>Stay updated with the latest news and insights from Biz Tool.</p>
+        </div>
+    </section>
+
+    <section class="blog-content">
+        <div class="posts">
+            <article class="post">
+                <h2 class="features-title">How to Leverage Local SEO for Your Business</h2>
+                <div class="quote-blog">
+                <p>Published on October 15, 2024 by <strong>Manas Kumar Sahoo</strong>  </p>
+                <br>
+                <img src="images/blog1.png" alt="Local SEO" />
+                <br>
+                <br>
+                <p>Learn how to enhance your local search visibility and attract more customers with effective SEO strategies...</p>
+                <a href="post.html" class="read-more">Read More <span class="fa fa-arrow-circle-right"></span></a>
+                </div>
+            </article>
+           
+            <article class="post">
+                <h2 class="features-title">Top 5 Digital Tools Every Small Business Needs</h2>
+                <div class="quote-blog">
+                <p>Published on October 10, 2024 by <strong>Aditi Verma</strong></p>
+                <br>
+                <img src="images/blog2.png" alt="Digital Tools" />
+                <br>
+                <br>
+                <p>Explore the essential digital tools that can help small businesses streamline operations and improve customer engagement...</p>
+                <a href="post.html" class="read-more">Read More <span class="fa fa-arrow-circle-right"></span></a>
+            </div>
+            </article>
+            <article class="post">
+                <h2 class="features-title">The Importance of Customer Feedback</h2>
+                <div class="quote-blog">
+                <p>Published on October 5, 2024 by <strong>Rajesh Gupta</strong></p>
+                <br>
+                <img src="images/feedback.png" alt="Customer Feedback" />
+                <br>
+                <br>
+                <p>Discover how gathering and analyzing customer feedback can drive your business growth and improve customer satisfaction...</p>
+                <a href="post.html" class="read-more">Read More <span class="fa fa-arrow-circle-right"></span></a>
+            </div>
+            </article>
+        </div>
+
+        <aside class="sidebar">
+        <h2 class="header-blog-slidBar">Categories </h2>
+            <ul>
+                <div class="quote">
+                <li> SEO</li>
+                <li>Digital Tools</li>
+                <li>Customer Experience</li>
+                <li>Business Growth</li>
+                </div>
+            </ul>
+            <br>
+            <br>
+            <h2 class="header-blog-slidBar">Recent Posts</h2>
+            <ul>
+                <div class="quote">
+                <li>How to Leverage Local SEO for Your Business</li>
+                <li>Top 5 Digital Tools Every Small Business Needs</li>
+                <li>The Importance of Customer Feedback</li>
+                </div>
+            </ul>
+        </aside>
+    </section>
+
+  
+    <script src="js/scripts.js"></script>
+</body>
+</html>

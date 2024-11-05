@@ -1,0 +1,2147 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: DM Mono;
+    font-style: normal;
+    color: #333;
+    line-height: 1.6;
+    
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: white; /* Solid background for visibility */
+    width: 100%;    
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.logo img {
+    width: 150px;
+}
+
+/* Middle Section Black Background & White Text 16c1a8 */
+.nav-links {
+    background: linear-gradient(90deg, #0a178c, #16c1a8); /* Gradient from dark blue to teal */
+    padding: 10px 30px;
+    border-radius: 50px;
+  
+}
+
+.nav-links ul {
+    display: flex;
+    list-style: none;
+}
+.menu-button {
+    background-color: #106c9a; /* Red background */
+    border: none; /* No border */
+    padding: 10px; /* Padding for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: none; /* Hide by default */
+}
+
+
+.nav-links.show {
+    display: block; /* Show when the class 'show' is added */
+}
+
+.nav-links ul li {
+    margin: 0 15px;
+}
+
+.nav-links ul li a {
+   
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 16px;
+    /* font-weight: bold; */
+}
+
+.notify-btn {
+    background: linear-gradient(90deg, #0a178c, #16c1a8); /* Gradient from dark blue to teal */
+    color: #f0f0f0 ;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+   
+}
+
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    background-color: #ffffff;
+    margin-top: 80px;
+
+
+}
+.hero {
+    position: relative; 
+    
+    overflow: hidden; /* Prevent any overflow from child elements */
+} 
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('gst5.png'); /* Replace with your image URL */
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Center the image */
+    opacity: 0.1; /* Set the opacity of the background image */
+    z-index: 0; /* Send the background behind other content */
+}
+.hero > * {
+    /* position: relative; Ensure other content is above the background */
+    z-index: 1; /* Bring other content in front of the background */
+}
+
+
+.hero .highlight {
+    color: #29c6af;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #0a178c, #16c1a8); /* Gold to orange gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Fill color transparent to show gradient */
+    display: inline-block; /* Ensure gradient applies correctly */
+}
+.golden-arc {
+    position: absolute;
+    top: 0; /* Align the arc to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 100px; /* Height for the arc */
+    border-bottom: 3px solid #FFD700; /* Golden color for the arc's outline */
+    border-radius: 0 0 50% 50%; /* Create a rounded bottom arc */
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 215, 0, 0.5), /* Semi-transparent gold */
+        rgba(255, 215, 0, 0) 80% /* Transparent */
+    ); /* Inner gradient for glow effect */
+    box-shadow: 
+        0 0 20px rgba(255, 215, 0, 0.7), /* Strong outer glow */
+        0 0 40px rgba(255, 215, 0, 0.5), /* Larger outer glow */
+        0 0 60px rgba(255, 215, 0, 0.3); /* Even larger outer glow */
+    z-index: 0; /* Keep it behind the text */
+}
+
+.golden-arc {
+    /* Existing styles */
+    animation: pulse 2s infinite; /* Pulsate every 2 seconds */
+}
+
+svg {
+    position: absolute;
+    top: 5%; /* Align at the top */
+    left: 51%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+}
+
+/*Mobile responsive*/
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    
+    .hero {
+        overflow: hidden; /* Prevent any overflow from child elements */
+    } 
+    .hero::before {
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('gst5.png'); /* Replace with your image URL */
+        background-size: cover; /* Ensure the image covers the entire section */
+        background-position: center; /* Center the image */
+        opacity: 0.1; /* Set the opacity of the background image */
+        z-index: 0; /* Send the background behind other content */
+    }
+    .menu-button {
+        position: relative; /* Ensure it’s positioned properly */
+        z-index: 2; /* Higher z-index to bring it above other content */
+        display: block; /* Show button in mobile view */
+        background-color: #106c9a; /* logo's color background */
+        display: flex; 
+        align-items: center; 
+        justify-content: flex-start; 
+        cursor: pointer; /* Pointer on hover */
+        border: none; /* No border */
+        padding: 10px; /* Padding for button */
+    }
+    
+    .menu-button img {
+        width: 30px; /* Adjust size of the icon */
+        height: auto; /* Maintain aspect ratio */
+    }
+    .nav-links {
+        display: none; /* Hide by default in mobile view */
+        flex-direction: column; /* Stack links vertically */
+        align-items: center; /* Center align items */
+        width: 100%; /* Full width */
+        background-color: white; /* White background for mobile view */
+        position: absolute; /* Position it below navbar */
+        top: 60px; /* Adjust based on navbar height */
+        left: 0;
+        transition: max-height 0.3s ease, padding 0.3s ease; /* Smooth transition */
+        max-height: 0; /* Initially hidden */
+        overflow: hidden; /* Prevent overflow when hidden */
+        border-radius: 0; /* Remove border-radius in mobile view */
+        z-index: 1000; /* Ensure it appears above other content */
+
+    }
+
+    .navbar {
+        display: flex; /* Show links in larger screens */
+      
+    align-items: center; /* Center items vertically */
+   
+    padding: 10px; /* Padding for the navbar */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when active */
+        max-height: 300px; /* Set a maximum height when active */
+    }
+
+    .nav-links {
+        margin-top: 10px; /* Space between navbar and links */
+        width: 100%; /* Full width */
+        justify-content: center; /* Center align links */
+    }
+
+    .nav-links ul {
+        flex-direction: column; /* Stack links vertically */
+        align-items: center; /* Center align items */
+        padding: 0; /* Remove default padding */
+
+    }
+
+    .nav-links ul li {
+        margin: 10px 0; /* Space between links */
+    }
+
+    
+
+    .hero {
+        padding: 60px 20px; /* Reduce padding for smaller screens */
+    }
+
+    .golden-arc {
+        height: 80px; /* Reduce arc height */
+    }
+
+    svg {
+        display: block; /* Show the SVG */
+        top: 30%; /* Adjust svg position */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Center the SVG */
+        width: 100%; /* Ensure it scales */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px; /* Further reduce padding */
+    }
+
+    .nav-links ul li a {
+        font-size: 14px; /* Smaller font size for links */
+    }
+
+    .notify-btn {
+        padding: 10px 20px; /* Adjust button padding */
+        font-size: 14px; /* Smaller font size */
+        display: block; /* Show button in laptop view */
+        display: none; /* Hide by default */
+
+    }
+    .button-container {
+        display: flex; /* Use flexbox for alignment */
+        justify-content: center; /* Center items horizontally */
+        margin-top: 20px; /* Space above the button */
+    }
+    
+    .notify-btn {
+        padding: 10px 20px; /* Adjust button padding */
+        font-size: 14px; /* Smaller font size */
+        background-color: #29c6af; /* Optional: Add background color */
+        color: #fff; /* Optional: Text color */
+        border: none; /* Remove border */
+        border-radius: 5px; /* Optional: Rounded corners */
+        cursor: pointer; /* Pointer on hover */
+        transition: background-color 0.3s; /* Smooth transition */
+    }
+    
+    .notify-btn:hover {
+        background-color: #1a9f87; /* Darker shade on hover */
+    }
+
+    .hero {
+        padding: 40px 10px; /* Further reduce hero section padding */
+    }
+
+    .gradient-text {
+        font-size: 24px; /* Adjust font size for gradient text */
+    }
+}
+
+/* CTA buttons inside black oval */
+.oval-button-container {
+    background-color: black;
+    border-radius: 50px;
+    /* padding: 20px; */
+    display: inline-block;
+}
+
+.cta-buttons {
+    margin-top: 20px;
+}
+
+.download-btn {
+    background-color: white;
+    color: black;
+    padding: 10px 30px;
+    border: none;
+    margin-right: 20px;
+    border-radius: 50px;
+    font-size: 16px;
+}
+
+.download-now {
+    background-color: #29c6af;
+    color: #f0f0f0;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+}
+
+/* Inner Black Oval */
+.inner-black-oval {
+    background: linear-gradient(90deg, #0a178c, #16c1a8); /* Gradient from dark blue to teal */
+    border-radius: 50px;
+    padding: 10px 30px;
+    color: white; /* Optional: set text color to white for better contrast */
+}
+
+
+/* Download Button inside Black Oval */
+.download-btn {
+    background-color: transparent;
+    color: #f0f0f0;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Features Section */
+
+
+.header {
+    display: flex; /* Align star and title in a row */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center content horizontally */
+    margin-bottom: 20px; /* Space below the header */
+}
+
+.features-title {
+    background: linear-gradient(90deg, #0a178c, #16c1a8); /* Gradient colors */
+    -webkit-background-clip: text; /* Clip background to text */
+    -webkit-text-fill-color: transparent; /* Make text color transparent */
+    margin-left: 10px;
+}
+
+
+.features {
+    display: grid; /* Use grid layout for the features */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px; /* Space between boxes */
+    color: #f9f9f9; /* Color for the title */
+
+}
+.feature-card {
+    position: relative; /* Ensure positioning for pseudo-element */
+    width: calc(33.333% - 20px);
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 15px;
+    text-align: center;
+    color: white; /* Change text color for better contrast */
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%; /* Adjust height for wave effect */
+    background: linear-gradient(135deg, #0a178c, #16c1a8); /* Wave gradient */
+    border-radius: 10px 10px 0 0; /* Rounded corners on top */
+    z-index: 1; /* Place it behind the text */
+}
+
+.feature-card > * {
+    position: relative; /* Ensure text is above the pseudo-element */
+    z-index: 2; /* Bring text above the gradient */
+}
+
+.feature-card img {
+    max-width: 100%; /* Responsive image */
+    border-radius: 10px; /* Rounded corners for images */
+    margin-bottom: 10px; /* Space below the image */
+}
+.feature-card h3 {
+    font-size: 18px; /* Adjust title size */
+    margin: 10px 0; /* Space above and below the title */
+}
+
+.feature-card p {
+    font-size: 14px; /* Adjust paragraph size */
+    color: #666; /* Optional: lighter text color for readability */
+}
+.image-card {
+    justify-content: center;
+    align-items: center;
+}
+
+.image-card img {
+    max-width: 100%; /* Responsive image */
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .cta-buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center align buttons */
+    }
+
+    .download-btn,
+    .download-now {
+        padding: 10px 20px; /* Adjust button padding */
+        margin: 10px 0; /* Space between buttons */
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .features {
+        grid-template-columns: 1fr; /* 1 column layout */
+    }
+
+    .feature-card {
+        width: auto; /* Auto width for flexibility */
+        margin: 10px 0; /* Space between boxes */
+    }
+
+    .feature-card h3 {
+        font-size: 16px; /* Smaller title size */
+    }
+
+    .feature-card p {
+        font-size: 12px; /* Smaller paragraph size */
+    }
+}
+
+@media (max-width: 480px) {
+    .download-btn,
+    .download-now {
+        font-size: 12px; /* Further reduce font size */
+        padding: 8px 15px; /* Adjust button padding */
+    }
+
+    .inner-black-oval {
+        padding: 10px 20px; /* Adjust padding */
+    }
+
+    .features-title {
+        font-size: 20px; /* Smaller title size */
+    }
+}
+
+
+/* New 6 row function */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.features-title {
+    background: linear-gradient(90deg, #0a178c, #16c1a8); /* Gradient colors */
+    -webkit-background-clip: text; /* Clip background to text */
+    -webkit-text-fill-color: transparent; /* Make text color transparent */
+    margin-left: 10px;
+}
+
+
+
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px; /* Adjust the margin to add more space between rows */
+}
+
+.row:nth-child(1) {
+    margin-bottom: 24px; /* Maximum space for the 1st row */
+}
+
+.row:nth-child(2) {
+    margin-bottom: 24px; /* Less space for the 2nd row */
+}
+
+.row:nth-child(3) {
+    margin-bottom: 24px; /* Least space for the 3rd row */
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: black;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    margin: 0 10px; /* Space between buttons in a row */
+
+}
+
+
+/* images for earth*/
+.image-gallery {
+    display: flex;
+    justify-content: center; /* Centers images horizontally */
+    gap: 100px; /* Space between images */
+}
+
+.image-gallery img {
+    width: auto; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: adds rounded corners */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .button-container {
+        margin-top: 30px; /* Reduce top margin on mobile */
+    }
+
+    .row {
+        flex-direction: column; /* Stack rows vertically */
+        align-items: center; /* Center align items */
+        margin-bottom: 16px; /* Reduce margin between rows */
+    }
+
+    .btn {
+        padding: 8px 16px; /* Smaller button padding */
+        font-size: 14px; /* Smaller font size */
+        margin: 10px 0; /* Stack buttons with vertical spacing */
+    }
+
+    .image-gallery {
+        display: flex;
+        flex-direction: column; /* Stack images vertically */
+        align-items: center; /* Center items horizontally */
+        gap: 20px; /* Space between images */
+    }
+    
+    .image-gallery img {
+        max-width: 90%; /* Limit image width to 90% of container */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Ensure no extra space below the image */
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .features-title {
+        font-size: 20px; /* Smaller title size */
+    }
+
+    .btn {
+        font-size: 12px; /* Further reduce button font size */
+    }
+}
+
+/* Adjust layout for rows */
+.button-container button:nth-child(4) {
+    grid-column: 1 / 3;
+}
+
+.button-container button:nth-child(6) {
+    grid-column: 1 / span 3;
+    justify-self: center;
+}
+ 
+.contact-section {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    min-height: 100vh; /* Full height of the viewport */
+    padding: 20px;
+}
+
+.form-title {
+    text-align: center; /* Center the title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.contact-container {
+    display: flex; /* Flex container for the form and info box */
+    justify-content: center; /* Center items horizontally */
+    align-items: flex-start; /* Align items at the top */
+    width: 100%;
+    max-width: 1200px; /* Maximum width for the container */
+}
+
+.contact-form-container {
+    background: white; /* White background for the form */
+    padding: 30px; /* Padding around the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 100%;
+    max-width: 600px; /* Max width of the form */
+    margin-right: 20px; /* Space between form and info box */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column; /* Arrange inputs in a column */
+}
+
+.row {
+    display: flex; /* Flexbox for row layout */
+    justify-content: space-between; /* Space between columns */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Space between form groups */
+    flex: 1; /* Allow columns to grow */
+}
+
+.form-group.col-md-6 {
+    margin-right: 15px; /* Space between two columns */
+}
+
+.form-group.col-md-6:last-child {
+    margin-right: 0; /* Remove margin from the last column */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Padding inside the input */
+    border: 1px solid #ccc; /* Border style */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Increased font size */
+}
+
+.contact-form textarea {
+    resize: vertical; /* Allow vertical resizing only */
+    height: 100px; /* Set a default height */
+}
+
+.contact-form button {
+    background: linear-gradient(90deg, #0a178c, #16c1a8);
+    color: #f0f0f0;
+    padding: 10px 20px; /* Button padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s; /* Transition effect */
+    font-size: 16px; /* Button font size */
+}
+
+
+
+.contact-info-container {
+    background: white; /* White background for the info box */
+    padding: 20px; /* Padding around the info box */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 100%;
+    max-width: 300px; /* Max width of the info box */
+}
+
+.contact-info {
+    text-align: left; /* Left-align the text */
+}
+
+.info-item {
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Center icons vertically */
+    margin: 10px 0; /* Space between items */
+}
+
+.info-icon {
+    margin-right: 10px; /* Space between icon and text */
+    width: 24px; /* Set icon size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column; /* Stack form and info box vertically */
+        align-items: center; /* Center items */
+    }
+
+    .contact-form-container {
+        margin-right: 0; /* Remove right margin on mobile */
+        margin-bottom: 20px; /* Add space below the form */
+    }
+
+    .contact-info-container {
+        max-width: 100%; /* Full width for info box */
+    }
+
+    .row {
+        flex-direction: column; /* Stack form fields vertically */
+        align-items: stretch; /* Stretch items to fill width */
+    }
+
+    .form-group {
+        margin-right: 0; /* Remove margin for mobile */
+        width: 100%; /* Full width for inputs */
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px; /* Smaller font size for inputs */
+        padding: 10px; /* Smaller padding */
+    }
+
+    .contact-form button {
+        font-size: 14px; /* Smaller button font size */
+        padding: 8px 16px; /* Adjust button padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .form-title {
+        font-size: 24px; /* Smaller title size */
+    }
+
+    .info-icon {
+        width: 20px; /* Smaller icon size */
+    }
+}
+
+/* How it Works Section */
+.how-it-works-section {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    color: #fff;
+}
+
+.steps {
+    display: flex;
+    flex-wrap: wrap; /* Allow boxes to wrap to the next line */
+    justify-content: space-between; /* Space out boxes evenly */
+    margin: -10px; /* Adjust for spacing */
+}
+/* video section */
+
+.content-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 50px;
+    background-color: #f9f9f9;
+}
+ .header-left {
+
+        display: flex;
+
+        justify-content: left;
+        margin-bottom: 0px;
+        margin-right: 25px;
+ }
+.text-section, .video-section {
+    flex: 1; /* Divide the section into equal halves */
+    margin: 0 20px;
+}
+
+.text-section h2, .video-section h2 {
+    margin-bottom: 20px;
+}
+
+.text-section p {
+    margin: 10px 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+.read-story {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #29c6af;
+    text-decoration: none;
+    font-weight: bold;
+}
+.text-section h3 {
+   color: rgb(0 0 0 / 70%);
+    font-size: 20px;
+    font-style: normal;
+    margin: 0px 0;
+}
+.text-section {
+    flex: 1;
+    margin: 0 20px;
+
+}
+
+.video-section {
+    flex: 1;
+    margin: 0 20px;
+    margin-left: 150px; 
+
+
+
+}
+
+.text-section h2 {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+
+
+.read-story .arrow {
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.read-story:hover {
+    color: #1a9f87;
+}
+
+.video-section iframe {
+    max-width: calc(100% - 15px); /* Ensure the video fits in the section minus padding */
+    border-radius: 10px;
+}
+
+/*container section starts*/
+
+.container {
+   /* // display: flex; */
+    flex-wrap: wrap; /* Allow boxes to wrap to the next line */
+    margin: auto;
+    justify-content: space-between; /* Space out boxes */
+}
+
+.box {
+    width: 350px; /* Set width */
+    height: 500px; /* Set height */
+    border: 1px solid #ccc; /* Optional: border for boxes */
+    border-radius: 10px; /* Optional: rounded corners */
+    overflow: hidden; /* Clip overflow */
+    margin-bottom: 20px; /* Space between rows */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: box shadow */
+}
+
+.box-image {
+    width: 100%; /* Make image full width */
+    height: 200px; /* Set height for the image */
+    object-fit: cover; /* Cover the area without distortion */
+}
+
+.content {
+    padding: 15px; /* Space inside the box */
+}
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column; /* Stack text and video sections */
+        align-items: center; /* Center content */
+    }
+
+    .text-section,
+   
+
+    .video-section {
+        margin: 0; /* Remove margin */
+        width: 100%; /* Full width on mobile */
+        overflow: hidden; /* Prevent overflow */
+    }
+    
+    .video-section img {
+        max-width: 100%; /* Ensure the image doesn't exceed the container's width */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Remove extra space below images */
+    }
+    
+
+    .steps {
+        justify-content: center; /* Center steps */
+    }
+
+    .box {
+        width: 100%; /* Full width for boxes */
+        max-width: 350px; /* Limit max width */
+        margin: 10px 0; /* Margin for spacing */
+    }
+
+    .text-section h2 {
+        font-size: 20px; /* Smaller title size */
+    }
+
+    .text-section p {
+        font-size: 16px; /* Smaller paragraph size */
+    }
+
+    .read-story {
+        font-size: 14px; /* Smaller read story size */
+    }
+}
+
+@media (max-width: 480px) {
+    .how-it-works-section {
+        padding: 30px 10px; /* Reduced padding for mobile */
+    }
+
+    .steps {
+        flex-direction: column; /* Stack steps vertically */
+        align-items: center; /* Center steps */
+    }
+
+    .text-section h2 {
+        font-size: 18px; /* Further reduce title size */
+    }
+
+    .text-section p,
+    .read-story {
+        font-size: 14px; /* Further reduce text size */
+    }
+}
+ /*testimonials section start's here*/
+
+.header-testimonial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+}
+.testimonial-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+
+}
+
+.features-title-review {
+
+      
+        /* margin-left: 10px; */
+    
+}
+
+.testimonial-item {
+   
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    flex: 1; /* Allow items to grow equally */
+    margin: 0 10px; /* Space between items */
+}
+
+.quote {
+    font-style: normal;
+    margin-bottom: 5px;
+    color: #7A7A7A; /* Darker shade for quote */
+}
+
+.author {
+    margin-bottom: 5px;
+}
+
+.name {
+    font-weight: bold;
+    color: #7A7A7A; /* Slightly darker shade for name */
+}
+
+.title {
+    color: #CCCCCC
+    ; /* Color for title */
+    font-size: 12px; /* Smaller font for title */
+}
+
+.stars {
+    font-size: 16px; /* Size of stars */
+    color: #29c6af; /* Color for stars */
+}
+.testimonial-divider {
+    margin: 20px auto; /* Center the line and add vertical spacing */
+    border: 0; /* Remove default border */
+    height: 1px; /* Set height for the line */
+    width: 80%; /* Set width to 80% of the parent container */
+
+    background-color: rgba(0, 0, 0, 0.1); /* Light gray color for the line */
+}
+ /*metrics section start's here*/
+
+ .metrics-section {
+    background-color: #ffffff; /* White background for the section */
+    padding: 20px 0; /* Padding for top and bottom */
+}
+
+.metrics-container {
+    display: flex;
+    justify-content: center; /* Center align items */
+    align-items: center; /* Align items vertically */
+    max-width: 1200px; /* Max width for the container */
+    margin: auto; /* Center the container */
+}
+
+
+.metric-item {
+    position: relative; /* Relative positioning for the vertical line */
+
+  
+    padding: 15px; /* Padding inside each item */
+    text-align: center; /* Center text within items */
+    flex: 1; /* Allow items to grow equally */
+}
+
+.metric-item.left {
+    text-align: left; /* Align text left for the first item */
+}
+
+.metric-item.center {
+    text-align: center; /* Center text for the second item */
+}
+
+.metric-item.right {
+    text-align: right; /* Align text right for the third item */
+}
+.vertical-line {
+    position: absolute; /* Position absolutely */
+    left: 10%; /* Center horizontally */
+    top: 0; /* Start at the top */
+    bottom: 0; /* Stretch to the bottom */
+    width: 1px; /* Width of the line */
+    background-color: rgba(0, 0, 0, 0.1); /* Light gray color */
+    z-index: 1; /* Ensure it's above the background */
+}
+
+.metric-item:first-child .vertical-line {
+    display: none; /* Hide line for the first item */
+}
+
+.content {
+    position: relative; /* Position relative for the content */
+    z-index: 2; /* Ensure content is above the vertical line */
+}
+.vertical-line {
+    height: 100%; /* Ensure the line takes the full height of the item */
+}
+.number {
+    font-size: 24px; /* Font size for numbers */
+    font-weight: bold; /* Bold text */
+    color: rgb(122, 122, 122); /* Dark gray for numbers */
+}
+
+.description {
+    color: rgb(204, 204, 204); /* Lighter gray for description */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .testimonial-container {
+        flex-direction: column; /* Stack testimonials vertically */
+        align-items: center; /* Center items */
+    }
+
+    .testimonial-item {
+        margin: 10px 0; /* Vertical spacing for stacked items */
+        width: 100%; /* Full width for items */
+        max-width: 350px; /* Limit max width */
+    }
+
+    .metrics-container {
+        flex-direction: column; /* Stack metrics vertically */
+        align-items: center; /* Center items */
+    }
+
+    .metric-item {
+        margin: 10px 0; /* Vertical spacing for stacked items */
+        width: 100%; /* Full width for items */
+        max-width: 350px; /* Limit max width */
+    }
+}
+
+@media (max-width: 480px) {
+    .header-testimonial {
+        flex-direction: column; /* Stack header elements */
+        align-items: center; /* Center header elements */
+    }
+
+    .quote {
+        font-size: 16px; /* Smaller font for quotes */
+    }
+
+    .number {
+        font-size: 20px; /* Smaller number size */
+    }
+
+    .description {
+        font-size: 14px; /* Smaller description size */
+    }
+}
+
+/*FAQ section*/
+.faq {
+    padding: 20px;
+    background-color: #fff; /* Grey background for the section */
+    max-width: 70%; /* Center the section */
+    margin: 0 auto; /* Center horizontally */
+    border-radius: 8px;
+}
+
+.faq-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.faq-title {
+    font-size: 24px;
+    color: #29c6af; /* Title color */
+}
+
+.faq-subtitle {
+    font-size: 18px;
+    color: rgba(122, 122, 122, 0.9);
+}
+
+.faq-item {
+    border-radius: 20px;
+    background-color: #ffffff; /* Background color for FAQ items */
+    margin-bottom: 10px;
+    padding: 15px;
+    transition: background-color 0.3s;
+}
+
+.faq-item:hover {
+    background-color: #eaeaea; /* Change on hover */
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-question p {
+    margin: 0;
+    color: #333333; /* Dark grey for question text */
+}
+
+.faq-icon {
+    background-color: #ffffff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.faq-answer {
+    display: none; /* Initially hide answers */
+    padding: 10px 0;
+    color: #7d7d7d; /* Light grey for answer text */
+}
+
+.faq-item.active .faq-answer {
+    display: block; /* Show answer when item is active */
+}
+
+.faq-item.active .faq-icon {
+    content: "✖"; /* Change icon for active item */
+}
+
+.faq-contact {
+    text-align: center;
+    margin-top: 20px;
+    color: rgba(122, 122, 122, 0.9);
+}
+
+.faq-contact a {
+    color: #106c9a; /* Link color */
+}
+
+/*cta section*/
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background: #333;
+    padding: 20px;
+    position: relative; /* Allow absolute positioning for the overlay */
+    overflow: hidden; /* Prevent overflow of gradient */
+  }
+
+  /* Inner container styling */
+  .content-box {
+    background: linear-gradient(90deg, #000000 0%, #434343 100%);
+    padding: 20px;
+    border-radius: 15px;
+    width: 90%;
+    text-align: center;
+    position: relative; /* For stacking context */
+
+  }
+
+  
+
+  /* Heading style */
+  .heading {
+    font-size: 24px;
+    color: #e0e0e0;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  /* Subtitle style */
+  .subtitle {
+    font-size: 16px;
+    background: linear-gradient(90deg, #cccccc, #666666); /* Light gray to darker gray gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Fill color transparent to show gradient */
+    margin-bottom: 20px;
+}
+
+
+  /* Button container */
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  /* Button styling */
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+
+/*Extra section */
+
+.feature-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ensure responsiveness */
+    margin: 20px auto; /* Center the section */
+    max-width: 1200px; /* Maximum width */
+}
+
+.feature-item {
+    position: relative; /* Ensure positioning for pseudo-element */
+    flex: 1 1 18%;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff; /* Fallback color */
+    overflow: hidden; /* Prevent overflow of pseudo-element */
+}
+
+.feature-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%; /* Adjust height for wave effect */
+    background: linear-gradient(135deg, #0a178c, #16c1a8); /* Wave gradient */
+    border-radius: 8px 8px 0 0; /* Rounded corners on top */
+    z-index: 1; /* Place it behind the text */
+}
+
+.feature-item > * {
+    position: relative; /* Ensure text is above the pseudo-element */
+    z-index: 2; /* Bring text above the gradient */
+}
+
+.feature-icon img {
+    max-width: 50%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 15px; /* Space between image and title */
+}
+
+.feature-title {
+    margin: 15px 0; /* Space around title */
+    font-size: 1.5em; /* Title size */
+}
+
+.feature-item p {
+    font-size: 1em; /* Content size */
+    color: #555; /* Content color */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .faq {
+        max-width: 95%; /* Allow more width on smaller screens */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .faq-title {
+        font-size: 20px; /* Smaller title size */
+    }
+
+    .faq-subtitle {
+        font-size: 16px; /* Smaller subtitle size */
+    }
+
+    .faq-item {
+        padding: 10px; /* Adjust padding for items */
+    }
+
+    .faq-question p {
+        font-size: 14px; /* Smaller question text */
+    }
+
+    .heading {
+        font-size: 20px; /* Smaller heading size */
+    }
+
+    .subtitle {
+        font-size: 14px; /* Smaller subtitle size */
+    }
+
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+    }
+
+    .feature-section {
+        flex-direction: column; /* Stack feature items */
+        align-items: center; /* Center items */
+    }
+
+    .feature-item {
+        flex: 1 1 90%; /* Full width for feature items */
+        margin: 10px 0; /* Vertical margin for stacked items */
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-title {
+        font-size: 18px; /* Further decrease title size */
+    }
+
+    .faq-subtitle {
+        font-size: 14px; /* Further decrease subtitle size */
+    }
+
+    .feature-title {
+        font-size: 1.2em; /* Smaller feature title size */
+    }
+
+    .feature-item p {
+        font-size: 0.9em; /* Smaller feature content size */
+    }
+}
+
+/* Map section */
+
+.map-section {
+    text-align: center; /* Center the heading */
+    padding: 20px; /* Add some padding */
+}
+
+.map-section iframe {
+    width: 80%; /* Set iframe width to 80% */
+    max-width: 951px; /* Optional: set a max width for larger screens */
+    height: 450px; /* Fixed height for iframe */
+    border: 0; /* Remove border */
+  
+}
+
+/* Optional: make the iframe height responsive for mobile */
+@media (max-width: 768px) {
+    .map-section iframe {
+        height: 450px; /* Adjust height for smaller screens */
+    }
+}
+
+/* about -us page */
+
+.about-hero {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.mission-vision {
+    margin-bottom: 40px;
+}
+
+.team-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+    width: 200px;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.contact-us {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-us a {
+    color: #ff7e5f;
+    text-decoration: none;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .team-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member {
+        width: 80%;
+    }
+}
+
+/* blog */
+/* Main Hero Section */
+.blog-hero {
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Main Content Section */
+.blog-content {
+    display: flex;
+    justify-content: space-between; /* Distribute space between posts and sidebar */
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.posts {
+    flex: 1; /* Allow posts section to take up equal space */
+    margin-right: 20px;
+}
+
+.post {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.post img {
+    width: 80%; /* Decreased size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Smooth transition for all effects */
+}
+
+.post img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); /* Add a soft shadow */
+}
+
+.header-blog-slidBar {
+    color: #1a9f87;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #1a9f87;
+    text-decoration: none;
+    position: relative;
+}
+
+.read-more::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #1a9f87;
+    bottom: 0;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.read-more:hover::after {
+    width: 100%; /* Slide underline animation */
+}
+
+/* Sidebar Section */
+.sidebar {
+    flex: 1; /* Allow sidebar to take up equal space */
+    padding: 20px;
+    border-radius: 10px;
+    /* background-color: #f5f5f5; */
+    /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); */
+    max-width: 48%; /* Ensure sidebar takes 50% of the container width */
+    /* box-sizing: border-box; Prevents overflow */
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    color: #1a9f87; /* Match header color with blog style */
+    text-transform: uppercase;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: all 0.3s ease; /* Smooth transition for hover */
+}
+
+.sidebar ul li a:hover {
+    color: #1a9f87; /* Change text color on hover */
+    text-decoration: underline;
+    letter-spacing: 1px; /* Slight space between letters on hover */
+}
+
+.quote-blog {
+    font-style: normal;
+    margin-bottom: 5px;
+    color: #7A7A7A;
+    margin-left: 15px;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.quote-blog:hover {
+    color: #1a9f87; /* Change text color on hover */
+    text-shadow: 0 0 10px rgba(26, 159, 135, 0.8); /* Add a subtle glow effect */
+    transform: translateY(-3px); /* Slight upward movement for emphasis */
+}
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 768px) {
+    .blog-content {
+        flex-direction: column; /* Stack the posts and sidebar on small screens */
+    }
+
+    .posts, .sidebar {
+        max-width: 100%; /* Ensure both sections take 100% of the width */
+        margin-right: 0; /* Remove any right margin */
+        margin-bottom: 20px; /* Add space below */
+    }
+
+    .post img {
+        width: 100%; /* Ensure images stretch to 100% of the container width */
+    }
+}
+
+ /* FAQ Section*/
+
+ .faq-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    justify-content: space-between; /* Align items side by side */
+
+}
+
+.faq-list {
+    flex: 1;
+    padding: 20px;
+    max-width: 50%; /* Ensure it takes up half of the container width */
+    box-sizing: border-box; /* Prevents overflow */
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.faq-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.faq-item h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #1a9f87;
+}
+
+.faq-item p {
+    margin: 5px 0 20px;
+    font-size: 16px;
+    font-style: normal;
+    color: #7A7A7A;
+}
+
+.image-section {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+
+@media (max-width: 800px) {
+    .faq-container {
+        flex-direction: column;
+    }
+
+    .faq-list {
+        flex: 1;
+        padding: 20px;
+        max-width: 100%; /* Ensure it takes up half of the container width */
+        box-sizing: border-box; /* Prevents overflow */
+    }
+
+    .image-section {
+        padding: 0;
+    }
+
+    .image-section img {
+        max-width: 80%;
+        margin: auto;
+    }
+}
+
+
+/* floating section */
+
+
+        /* Floating buttons */
+        .floating-buttons {
+            position: fixed;
+            right: -148px; /* Aligns the buttons flush against the right edge */
+            top: 50%; /* Centers vertically */
+            z-index: 999;
+            display: flex; /* Enables flexbox layout */
+            flex-direction: column; /* Stacks buttons vertically */
+            align-items: flex-start; /* Aligns buttons to the left side of the container */
+            gap: 50px; /* Adds a gap of 5px between the buttons */
+
+        }
+        
+        .sendenquiry-btn,
+        .button.green {
+            height: 50px;
+            width: 150px; /* Fixed width */
+            line-height: 38px; /* Center text vertically */
+            border: none; /* No border for WhatsApp button */
+            box-shadow: 0 1px 3px #332; /* Slight shadow for depth */
+            border-radius: 0; /* No rounded corners */
+            cursor: pointer;
+            transform: rotate(90deg); /* Rotate the button */
+            transform-origin: left top; /* Change the point of rotation */
+            transition: background 0.3s; /* Smooth background transition */
+        }
+        
+        .sendenquiry-btn {
+            background: #e9221a; /* Change color on hover (darken) */
+            color: white;
+        }
+        
+        .sendenquiry-btn:hover {
+            background: #e63939; /* Change color on hover (darken) */
+        }
+        
+        .button.green {
+            background: #28a745; /* Green background */
+            color: white;
+        }
+        
+        .button.green:hover {
+            background: #218838; /* Darken green on hover */
+        }
+        .sendenquiry-btn {
+            top: 44% !important;
+        }
+        .fa-file-text-o:before {
+            content: "\f0f6";
+            padding-right: 10px;
+            font-size: 20px;
+        }
+
+        .fa-whatsapp:before {
+            content: "\f232";
+            padding-right: 10px;
+            font-size: 20px;
+        }
+        
+        /* Popup form styles */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+        }
+
+        
+
+        /* header section  */
+
+ .gst-billing-section {
+    width: 100%;
+    padding: 20px 0;
+    background: linear-gradient(45deg, rgba(10, 23, 140, 0.9), rgba(22, 193, 168, 0.8), rgba(255, 194, 16, 0.6), rgba(0, 130, 204, 0.7));
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    border-radius: 40px; /* Rounded corners for a sleek effect */
+    position: relative;
+    overflow: hidden; /* Prevents overflow of content outside the shape */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+  }
+  
+  .heading-btn-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%; /* Full width */
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Heading Style */
+  .gst-heading {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #ffffff; /* White text */
+    padding: 0 20px; /* Padding inside the heading box */
+    z-index: 2;
+    line-height: 1.2;
+  }
+  
+  /* Unique and sleek design with clip-path and gradient */
+  .gst-billing-section::before {
+    content: "";
+    position: absolute;
+    top: -50px; /* Move the pseudo-element up */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(10, 23, 140, 0.6), rgba(22, 193, 168, 0.8), rgba(255, 194, 16, 0.6));
+    clip-path: polygon(0 20%, 50% 0%, 100% 20%, 100% 80%, 50% 100%, 0 80%);
+    border-radius: 30px; /* Rounded corners for the pseudo-element */
+    z-index: -1; /* Ensure it’s below the content */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1200px) {
+    .gst-heading {
+      font-size: 2.5rem;
+    }
+    
+    .container {
+      flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .gst-heading {
+      font-size: 2rem;
+    }
+  
+    .gst-billing-section::before {
+      top: -40px; /* Adjust for smaller screens */
+      clip-path: polygon(0 15%, 50% 0%, 100% 15%, 100% 85%, 50% 100%, 0 85%); /* Slightly adjusted shape for medium screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .gst-heading {
+      font-size: 1.5rem;
+    }
+  
+    .gst-billing-section::before {
+      top: -30px; /* Further adjust for small screens */
+      clip-path: polygon(0 10%, 50% 0%, 100% 10%, 100% 90%, 50% 100%, 0 90%); /* Adjust shape for mobile */
+    }
+  }
+
+  /* post section of blog */
+/* General Styles */
+body {
+    font-family: DM Mono;
+    font-style: normal;
+    background-color: #f4f7f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.read-more-page-read-more {
+    background: linear-gradient(135deg, rgba(26, 159, 135, 0.1), rgba(255, 255, 255, 0.9));
+    padding: 60px 20px;
+}
+
+.container-read-more {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Blog Content Layout */
+.blog-content-read-more {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.blog-post-read-more {
+    flex: 3;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post-read-more:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.blog-title-read-more {
+    font-size: 36px;
+    font-weight: bold;
+    color: #1a9f87;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.blog-meta-read-more {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 25px;
+}
+
+.blog-meta-read-more span {
+    margin-right: 15px;
+}
+
+.blog-image-read-more img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.blog-body-read-more p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+    text-align: justify;
+}
+
+.author-bio-read-more {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    border-top: 2px solid #e0e0e0;
+    padding-top: 20px;
+}
+
+.author-image-read-more img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 4px solid #1a9f87;
+    margin-right: 20px;
+}
+
+.bio-info p {
+    font-size: 16px;
+    color: #666;
+}
+
+.bio-info p strong {
+    color: #1a9f87;
+}
+
+.comments-read-more {
+    margin-top: 40px;
+}
+
+.comments-read-more h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1a9f87;
+    margin-bottom: 15px;
+}
+
+.comment-form-read-more input {
+    width: calc(100% - 120px);
+    padding: 12px;
+    font-size: 16px;
+    margin-right: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s ease;
+}
+
+.comment-form-read-more input:focus {
+    border-color: #1a9f87;
+}
+
+.comment-form-read-more button {
+    padding: 12px 20px;
+    background-color: #1a9f87;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comment-form-read-more button:hover {
+    background-color: #148c74;
+}
+
+/* Sidebar - Related Posts */
+.sidebar-read-more {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-read-more h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1a9f87;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sidebar-read-more ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-read-more ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar-read-more ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+    position: relative;
+}
+
+.sidebar-read-more ul li a::before {
+    content: '→';
+    position: absolute;
+    left: -20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar-read-more ul li a:hover {
+    color: #1a9f87;
+    padding-left: 10px;
+}
+
+.sidebar-read-more ul li a:hover::before {
+    opacity: 1;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .blog-content-read-more {
+        flex-direction: column; /* Stack content vertically on smaller screens */
+    }
+
+    .blog-post-read-more {
+        margin-bottom: 30px;
+    }
+
+    .sidebar-read-more {
+        margin-top: 30px;
+    }
+
+    .comment-form-read-more input {
+        width: calc(100% - 110px); /* Adjust input width for mobile */
+    }
+
+    .comment-form-read-more button {
+        width: 100%; /* Make button full width on mobile */
+    }
+
+    .author-bio-read-more {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .author-image-read-more img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 15px;
+    }
+
+    .bio-info p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-title-read-more {
+        font-size: 28px; /* Adjust title size for very small screens */
+    }
+
+    .comment-form-read-more input {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .comment-form-read-more button {
+        font-size: 16px;
+    }
+}
+
+/* Larger screens: Desktop (Optional) */
+@media (min-width: 1024px) {
+    .container-read-more {
+        max-width: 1100px;
+    }
+}
+

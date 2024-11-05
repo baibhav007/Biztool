@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Biz Tool</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Meta Tags for Blog Page -->
+    <meta name="title" content="Blog - GST Billing App">
+    <meta name="description" content="Read the latest blogs on GST, taxation, billing, and business tips to keep your accounting up-to-date with GST Billing App.">
+    <meta name="keywords" content="blog, gst, gst billing, accounting tips, gst tips, gst blog, business blog">
+    
+    <!-- Open Graph Tags for Social Media -->
+    <meta property="og:title" content="Blog - GST Billing App">
+    <meta property="og:description" content="Read the latest blogs on GST, taxation, billing, and business tips to keep your accounting up-to-date with GST Billing App.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/blog">
+    <meta property="og:image" content="https://yourwebsite.com/images/blog-image.jpg">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog - GST Billing App">
+    <meta name="twitter:description" content="Read the latest blogs on GST, taxation, billing, and business tips to keep your accounting up-to-date with GST Billing App.">
+    <meta name="twitter:image" content="https://yourwebsite.com/images/blog-image.jpg">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.html">
+            <div class="logo">
+                <img src="images/logo.png" alt="Biz Tool Logo" />
+            </div>
+        </a>
+        <nav>
+            <button class="menu-button" id="menuButton" aria-expanded="false" onclick="toggleNavbar()">
+                <img src="images/menu-button.png" alt="Menu">
+            </button>
+            <div class="nav-links" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="blog.html">Blogs</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact-us</a></li>
+                </ul>
+            </div>
+        </nav>
+        <button class="notify-btn">Download Now</button>
+    </header>
+    <br>
+      <br>
+    <section class="gst-billing-section">
+        <div class="container">
+          <div class="heading-btn-col">            
+              <h1 class="gst-heading" id="h-gst-billing-app">Post</h1>
+          </div>
+        </div>
+      </section>
+    <div class="floating-buttons">
+        <button class="button sendenquiry-btn" onclick="openPopup()"><i class="fa fa-file-text-o">Send Inquiry</i></button>
+        <button class="button green" onclick="openWhatsApp()"><i class="fa fa-whatsapp"></i>WhatsApp</button>
+    </div>
+
+    <!-- Popup Form -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">✖</span>
+            <h2 class="features-title">Contact  Us</h2>
+
+            <form action="#" method="post" class="contact-form">
+                <input type="text" placeholder="Your Name*" required><br>
+                <input type="email" placeholder="Your Email*" required><br>
+                <textarea placeholder="Your Message*" required></textarea><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+        
+    <section class="read-more-page-read-more">
+        <div class="container-read-more">
+          <div class="blog-content-read-more">
+            <div class="blog-post-read-more">
+              <h1 class="blog-title-read-more">The Future of GST Billing in India</h1>
+              <div class="blog-meta-read-more">
+                <span class="author-read-more">By Admin</span> | 
+                <span class="date-read-more">October 20, 2024</span>
+              </div>
+              <div class="blog-image-read-more">
+                <img src="images/gst1.png" alt="GST Billing Image">
+              </div>
+              <div class="blog-body-read-more">
+                <p>Welcome to our latest blog post about the future of GST billing in India...</p>
+                <p>This is the detailed content of the post...</p>
+                <p>More insights and examples of how businesses are adapting...</p>
+                <!-- Add more paragraphs as needed -->
+              </div>
+              
+              <!-- Author Bio (Optional) -->
+              <div class="author-bio-read-more">
+                <div class="author-image-read-more">
+                  <img src="images/team1.png" alt="Author Image">
+                </div>
+                <div class="bio-info">
+                  <p><strong>Admin</strong> is a GST expert who writes on various business and taxation topics.</p>
+                </div>
+              </div>
+              
+              <!-- Comments Section (Optional) -->
+              <div class="comments-read-more">
+                <h3>Comments</h3>
+                <div class="comment-form-read-more">
+                  <input type="text" placeholder="Leave a comment...">
+                  <button type="submit">Submit</button>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Sidebar with Related Posts -->
+            <div class="sidebar-read-more">
+              <h3>Related Posts</h3>
+              <ul>
+                <li><a href="#">How GST is Transforming Business in India</a></li>
+                <li><a href="#">Understanding GST Compliance for Small Businesses</a></li>
+                <li><a href="#">GST Billing Apps You Should Know About</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+  
+    <script src="js/scripts.js"></script>
+</body>
+</html>

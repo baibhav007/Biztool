@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biz Tool - Digital Business Tool & Local</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+      <!-- Meta Tags for Contact Us Page -->
+  <meta name="title" content="Contact Us - GST Billing App">
+  <meta name="description" content="Get in touch with the GST Billing App team for support, queries, or feedback. We're here to assist you with all your GST billing needs.">
+  <meta name="keywords" content="contact us, gst support, gst queries, contact gst billing app, gst help">
+  
+  <!-- Open Graph Tags for Social Media -->
+  <meta property="og:title" content="Contact Us - GST Billing App">
+  <meta property="og:description" content="Get in touch with the GST Billing App team for support, queries, or feedback. We're here to assist you with all your GST billing needs.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourwebsite.com/contact-us">
+  <meta property="og:image" content="https://yourwebsite.com/images/contact-us-image.jpg">
+  
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact Us - GST Billing App">
+  <meta name="twitter:description" content="Get in touch with the GST Billing App team for support, queries, or feedback. We're here to assist you with all your GST billing needs.">
+  <meta name="twitter:image" content="https://yourwebsite.com/images/contact-us-image.jpg">
+
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <a href="index.html">
+            <div class="logo">
+                <img src="images/logo.png" alt="Biz Tool Logo" />
+            </div>
+        </a>
+        <button class="menu-button" id="menuButton" aria-expanded="false" onclick="toggleNavbar()">
+            <img src="images/menu-button.png" alt="Menu">
+        </button>
+        <div class="nav-links" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact-us</a></li>
+            </ul>
+        </div>
+        </nav>
+        
+        <button class="notify-btn">Download Now</button>
+    </header>
+    <br>
+    <br>
+
+    <section class="gst-billing-section">
+        <div class="container">
+          <div class="heading-btn-col">            
+              <h1 class="gst-heading" id="h-gst-billing-app">Contact Us</h1>
+          </div>
+        </div>
+      </section>
+    <div class="floating-buttons">
+        <button class="button sendenquiry-btn" onclick="openPopup()"><i class="fa fa-file-text-o">Send Inquiry</i></button>
+        <button class="button green" onclick="openWhatsApp()"><i class="fa fa-whatsapp"></i>WhatsApp</button>
+    </div>
+
+    <!-- Popup Form -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">✖</span>
+            <h2 class="features-title">Contact  Us</h2>
+
+            <form action="#" method="post" class="contact-form">
+                <input type="text" placeholder="Your Name*" required><br>
+                <input type="email" placeholder="Your Email*" required><br>
+                <textarea placeholder="Your Message*" required></textarea><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+   
+    <br>
+     <section class="contact-section">
+        <div class="header">
+            <h1 style="font-size: 30px;" class="features-title">Contact Us</h1>
+            </div>
+        <div class="contact-container">
+            <div class="contact-form-container">
+                <form action="#" method="post" class="contact-form">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <input type="text" placeholder="Enter your name*" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="email" placeholder="Enter your email*" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <input type="text" placeholder="Enter your number*" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="text" placeholder="Website Link">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <textarea placeholder="Enter your message*" required></textarea>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <button type="submit">Send Message</button>
+                    </div>
+                </form>
+            </div>
+            <div class="contact-info-container">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <img src="images/location.png" alt="Location" class="info-icon">
+                        <span>Location:  Uttar Pradesh 201306</span>
+                    </div>
+                    <div class="info-item">
+                        <img src="images/contact.png" alt="Contact" class="info-icon">
+                        <span>Contact: +91 8741022022</span>
+                    </div>
+                    <div class="info-item">
+                        <img src="images/mail.png" alt="Email" class="info-icon">
+                        <span>Email: support@biztool.live</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="map-section">
+        <h1 style="font-size: 30px;" class="features-title">Our Location</h1>
+      
+        <br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28027.528415349367!2d77.41809428845765!3d28.586542594120193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cef29ba0e1a4f%3A0x63538614dd1688af!2sNX%20One%20Avenue.!5e0!3m2!1sen!2sin!4v1730625798527!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    
+    
+    <script src="js/scripts.js"></script>
+
+    
+</body>
+</html>
